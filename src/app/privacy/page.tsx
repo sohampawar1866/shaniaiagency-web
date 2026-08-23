@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           {/* Intro */}
           <div className="bg-surface-yellow rounded-xl p-5 border border-brand-yellow/20 mb-10">
             <p className="text-body-sm text-ink leading-relaxed">
-              ShaniAI Agency (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read it carefully.
+              ShaniAI Agency is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read it carefully.
             </p>
           </div>
 
