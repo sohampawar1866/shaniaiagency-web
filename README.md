@@ -121,4 +121,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ---
 
+## 🧾 Repository Description Automation
+
+Use the included script to generate concise, portfolio-friendly descriptions for all repositories owned by `sohampawar1866`, automatically skipping forks.
+
+```bash
+# Preview updates (dry run)
+npm run repo:descriptions
+
+# Apply updates to GitHub repository descriptions
+GITHUB_TOKEN=your_github_token npm run repo:descriptions -- --apply
+```
+
+The token must have permission to edit repository metadata.
+
+---
+
 © 2026 ShaniAI Agency. All rights reserved.
