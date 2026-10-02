@@ -167,7 +167,7 @@ function DesktopSection({
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-teal" />
                 Industries We Serve
               </div>
-              <h2 className="font-sans text-heading-1 font-medium text-ink tracking-tight">
+              <h2 className="font-display text-heading-1 font-semibold text-ink tracking-tight">
                 Enterprise breadth across diverse sectors
               </h2>
             </div>
@@ -241,7 +241,7 @@ function MobileSection() {
           <span className="w-1.5 h-1.5 rounded-full bg-brand-teal" />
           Industries We Serve
         </div>
-        <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+        <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
           Enterprise breadth across diverse sectors
         </h2>
       </div>
@@ -270,7 +270,7 @@ function MobileSection() {
                     {tile.badge}
                   </span>
                 </div>
-                <h3 className="font-sans text-heading-4 font-medium text-ink mb-2">
+                <h3 className="font-display text-heading-4 font-semibold text-ink mb-2">
                   {tile.name}
                 </h3>
                 <p className="font-sans text-body-sm text-steel leading-relaxed">
@@ -317,7 +317,7 @@ function DesktopCard({ tile }: { tile: IndustryTile }) {
             {tile.badge}
           </span>
         </div>
-        <h3 className="font-sans text-heading-4 font-medium text-ink mb-2">
+        <h3 className="font-display text-heading-4 font-semibold text-ink mb-2">
           {tile.name}
         </h3>
         <p className="font-sans text-body-sm text-steel leading-relaxed">

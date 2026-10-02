@@ -124,7 +124,7 @@ export default function Process() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             How We Work
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-on-primary tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-on-primary tracking-tight">
             A structured 4-step engineering process
           </h2>
         </motion.div>
@@ -169,7 +169,7 @@ export default function Process() {
                     <div className={`w-8 h-8 rounded-lg ${step.glowColor} border border-white/10 flex items-center justify-center`}>
                       <Icon className={`w-4 h-4 ${step.iconColor} stroke-[2.2]`} />
                     </div>
-                    <h3 className="font-sans text-heading-3 font-medium text-on-primary">
+                    <h3 className="font-display text-heading-3 font-semibold text-on-primary">
                       {step.title}
                     </h3>
                   </div>

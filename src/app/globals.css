@@ -1,17 +1,118 @@
 @import "tailwindcss";
 
 /* 
- * Miro Design Tokens Configuration for Tailwind CSS v4
- * 
- * FONT NOTE:
- * Roobert PRO is Miro's custom geometric display typeface.
- * Inter is configured as the fallback font via --font-inter if Roobert PRO is unavailable.
+ * ShaniAI Agency Design Tokens — Tailwind CSS v4
+ *
+ * TYPOGRAPHY SYSTEM:
+ *   LT Soul     → Display serif: headings, hero H1/H2, brand moments
+ *   LT Superior → Geometric sans: body, UI, nav, buttons, captions
  */
+
+/* ── FONT FACE DECLARATIONS ──────────────────────────────────────────────── */
+
+/* LT Soul – Serif Display Face */
+@font-face {
+  font-family: "LT Soul";
+  src: url("/fonts/LTSoul-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Soul";
+  src: url("/fonts/LTSoul-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Soul";
+  src: url("/fonts/LTSoul-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Soul";
+  src: url("/fonts/LTSoul-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LT Superior – Geometric Sans-Serif */
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LT Superior";
+  src: url("/fonts/LTSuperior-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── DESIGN TOKENS ───────────────────────────────────────────────────────── */
 
 @theme {
   /* Fonts */
-  --font-sans: "Roobert PRO", var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-roobert: "Roobert PRO", var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "LT Superior", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "LT Soul", Georgia, "Times New Roman", serif;
+  --font-superior: "LT Superior", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-soul: "LT Soul", Georgia, "Times New Roman", serif;
 
   /* Colors */
   --color-primary: #1c1c1e;
@@ -54,6 +155,14 @@
   --color-on-dark: #ffffff;
   --color-on-dark-muted: #a5a8b5;
   --color-footer-bg: #1c1c1e;
+
+  /* Hero Gradient Color Tokens */
+  --color-gradient-orange-core: #F4622A;
+  --color-gradient-orange-mid: #FF8C42;
+  --color-gradient-amber: #FFAB66;
+  --color-gradient-blue-periwinkle: #9DB0E8;
+  --color-gradient-lavender: #C5B8E8;
+  --color-gradient-blue-light: #B8C8F0;
 
   /* Border Radius */
   --radius-xs: 4px;
@@ -137,4 +246,19 @@
   --shadow-card: 0px 4px 12px 0px rgba(5, 0, 56, 0.06);
   --shadow-mockup: 0px 12px 32px -4px rgba(5, 0, 56, 0.08);
   --shadow-modal: 0px 16px 48px -8px rgba(5, 0, 56, 0.12);
+}
+
+/* ── HERO GRADIENT UTILITY ───────────────────────────────────────────────── */
+/* 
+ * Atmospheric orange-blue-white gradient inspired by Sarvam AI hero.
+ * Layered radial blobs on a white canvas — no harsh edges, all soft blur.
+ * Orange aura at top-center, periwinkle blue on lower sides, dissolves to white.
+ */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 100% 65% at 50% -5%,  #F4622Aee 0%, #FF8C42bb 25%, #FFAB6644 55%, transparent 72%),
+    radial-gradient(ellipse 65%  55% at 0%   50%,  #9DB0E8cc 0%, #7B9AE0aa 30%, transparent 68%),
+    radial-gradient(ellipse 60%  50% at 100% 45%,  #C5B8E8cc 0%, #9DB0E899 30%, transparent 68%),
+    radial-gradient(ellipse 80%  50% at 50%  110%, #B8C8F0bb 0%, #9DB0E844 40%, transparent 62%),
+    #ffffff;
 }

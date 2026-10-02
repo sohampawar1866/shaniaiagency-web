@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Miro Design Token Configuration
- * 
- * Font Note:
- * Roobert PRO is Miro's custom geometric display typeface.
- * Inter is configured as the fallback font if Roobert PRO is unavailable on the client system.
+ * ShaniAI Agency — Tailwind Design Token Configuration
+ *
+ * TYPOGRAPHY:
+ *   font-display / font-soul   → LT Soul (serif) — headings, hero H1/H2
+ *   font-sans / font-superior  → LT Superior (geometric sans) — body, UI, nav, buttons
  */
 
 const config: Config = {
@@ -16,6 +16,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // LT Superior — geometric sans-serif for body, UI, nav, buttons
+        sans: [
+          "LT Superior",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        superior: [
+          "LT Superior",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        // LT Soul — elegant serif for display headings, hero H1/H2
+        display: [
+          "LT Soul",
+          "Georgia",
+          "Times New Roman",
+          "serif",
+        ],
+        soul: [
+          "LT Soul",
+          "Georgia",
+          "Times New Roman",
+          "serif",
+        ],
+      },
       colors: {
         // Brand & Accent
         primary: "#1c1c1e",
@@ -62,27 +94,6 @@ const config: Config = {
         "on-dark": "#ffffff",
         "on-dark-muted": "#a5a8b5",
         "footer-bg": "#1c1c1e",
-      },
-      fontFamily: {
-        // Roobert PRO primary display face with Inter fallback
-        sans: [
-          "Roobert PRO",
-          "var(--font-inter)",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
-        roobert: [
-          "Roobert PRO",
-          "var(--font-inter)",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
       },
       fontSize: {
         "hero-display": ["80px", { lineHeight: "1.05", letterSpacing: "-2px" }],

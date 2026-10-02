@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-canvas py-12 sm:py-16 md:py-20 lg:py-hero px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative bg-transparent py-12 sm:py-16 md:py-20 lg:py-hero px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* ── 3D FLOATING BACKGROUND TILES LAYER ──────────────────────────────── */}
       <div
@@ -149,7 +149,7 @@ export default function Hero() {
                 : { staggerChildren: 0.06, delayChildren: 0.18 },
             },
           }}
-          className="font-sans font-medium text-ink text-[36px] sm:text-[48px] md:text-[60px] lg:text-hero-display leading-[1.1] md:leading-[1.08] lg:leading-[1.05] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] max-w-[1000px] mx-auto"
+          className="font-display font-semibold text-ink text-[36px] sm:text-[48px] md:text-[60px] lg:text-hero-display leading-[1.1] md:leading-[1.08] lg:leading-[1.05] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] max-w-[1000px] mx-auto"
         >
           {/* First part of sentence: "We build the software your business" */}
           {baseHeadlineWords.map((word, index) => (

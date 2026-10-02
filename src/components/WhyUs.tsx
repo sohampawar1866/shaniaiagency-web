@@ -155,7 +155,7 @@ export default function WhyUs() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Why Work With Us
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Engineered for speed, transparency, and impact
           </h2>
         </motion.div>
@@ -191,7 +191,7 @@ export default function WhyUs() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-sans text-heading-3 font-medium text-ink mb-3 leading-snug">
+                  <h3 className="font-display text-heading-3 font-semibold text-ink mb-3 leading-snug">
                     {item.title}
                   </h3>
 

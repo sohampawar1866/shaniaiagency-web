@@ -69,7 +69,7 @@ export default function FAQ() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Frequently Asked Questions
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Clear answers to practical questions
           </h2>
         </motion.div>

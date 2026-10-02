@@ -31,7 +31,7 @@ export default function CtaBanner() {
           </div>
 
           {/* Banner Title */}
-          <h2 className="font-sans text-heading-3 sm:text-heading-2 lg:text-display-lg font-medium text-on-primary max-w-[840px] mx-auto leading-[1.1] tracking-tight mb-4 sm:mb-6">
+          <h2 className="font-display text-heading-3 sm:text-heading-2 lg:text-display-lg font-semibold text-on-primary max-w-[840px] mx-auto leading-[1.1] tracking-tight mb-4 sm:mb-6">
             Ready to build the software your business actually needs?
           </h2>
 

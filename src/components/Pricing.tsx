@@ -97,7 +97,7 @@ export default function Pricing() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Pricing Structure
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight mb-4">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-4">
             Simple, transparent engagement model
           </h2>
           <p className="font-sans text-subtitle text-slate leading-relaxed">
@@ -135,7 +135,7 @@ export default function Pricing() {
                   )}
                 </div>
 
-                <h3 className="font-sans text-heading-2 font-medium text-ink mb-3">
+                <h3 className="font-display text-heading-2 font-semibold text-ink mb-3">
                   {card.title}
                 </h3>
                 <p className="font-sans text-body-sm text-slate mb-8 leading-relaxed">

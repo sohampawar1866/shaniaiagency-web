@@ -22,7 +22,7 @@ export default function Nav() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: shouldReduceMotion ? 0.01 : durations.sm, ease: "easeOut" }}
-      className="sticky top-0 z-50 w-full bg-canvas/95 backdrop-blur-md border-b border-hairline-soft"
+      className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-sm"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-[60px] sm:h-[64px] flex items-center justify-between gap-3">
         {/* Left: Brand Logo */}
@@ -31,10 +31,10 @@ export default function Nav() {
             S
           </div>
           {/* Full name on md+, abbreviated on small mobile */}
-          <span className="hidden sm:block font-heading-4 font-bold text-ink tracking-tight truncate">
+          <span className="hidden sm:block font-display font-semibold text-ink tracking-tight truncate text-heading-4">
             ShaniAI Agency
           </span>
-          <span className="sm:hidden font-sans font-bold text-ink tracking-tight text-body-sm">
+          <span className="sm:hidden font-display font-semibold text-ink tracking-tight text-body-sm">
             ShaniAI
           </span>
         </Link>
@@ -45,7 +45,7 @@ export default function Nav() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-body-sm font-medium text-steel hover:text-ink transition-colors duration-150 whitespace-nowrap"
+              className="text-body-sm font-semibold text-ink hover:text-primary transition-colors duration-150 whitespace-nowrap"
             >
               {link.name}
             </Link>
@@ -94,7 +94,7 @@ export default function Nav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ type: "spring", stiffness: 340, damping: 30 }}
-            className="lg:hidden border-t border-hairline bg-canvas px-4 pt-4 pb-6 shadow-modal overflow-hidden"
+            className="lg:hidden border-t border-white/20 bg-white/85 backdrop-blur-xl px-4 pt-4 pb-6 shadow-modal overflow-hidden"
           >
             <nav className="flex flex-col gap-1 mb-5">
               {navLinks.map((link) => (

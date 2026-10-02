@@ -268,7 +268,7 @@ export default function FeaturedWork() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
             Featured Case Studies
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Real problems. Custom-engineered solutions.
           </h2>
         </motion.div>
@@ -438,7 +438,7 @@ export default function FeaturedWork() {
                   </div>
 
                   {/* Case Study Title */}
-                  <h3 className="font-sans text-heading-3 font-medium text-ink mb-4 leading-snug">
+                  <h3 className="font-display text-heading-3 font-semibold text-ink mb-4 leading-snug">
                     {activeStudy.title}
                   </h3>
 

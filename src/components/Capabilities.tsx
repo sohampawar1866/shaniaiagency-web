@@ -104,7 +104,7 @@ export default function Capabilities() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             What We Build
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Capabilities tailored to your vision
           </h2>
         </motion.div>
@@ -140,7 +140,7 @@ export default function Capabilities() {
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="font-sans text-heading-3 font-medium mb-3 leading-snug">
+                  <h3 className="font-display text-heading-3 font-semibold mb-3 leading-snug">
                     {item.title}
                   </h3>
 

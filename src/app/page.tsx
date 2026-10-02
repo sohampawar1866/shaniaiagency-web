@@ -14,9 +14,14 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-canvas text-ink flex flex-col">
-      <Nav />
-      <main className="flex-grow">
+      {/* Nav + Hero share one gradient layer — transparent nav bleeds into gradient */}
+      <div className="hero-gradient">
+        <Nav />
         <Hero />
+      </div>
+
+      {/* Rest of page sections */}
+      <main className="flex-grow">
         <Capabilities />
         <FeaturedWork />
         <Industries />
