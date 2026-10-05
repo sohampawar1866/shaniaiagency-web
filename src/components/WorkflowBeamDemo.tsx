@@ -2,8 +2,7 @@
 
 import React, { useRef } from "react";
 import { AnimatedBeam, Circle } from "@/components/ui/animated-beam";
-import { FileText, MessageSquare, Database, Webhook, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { FileText, MessageSquare, Database, Webhook, Zap, CheckCircle2 } from "lucide-react";
 
 export default function WorkflowBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,7 +48,7 @@ export default function WorkflowBeamDemo() {
         />
 
         {/* ── COLUMN 1: FRAGMENTED INPUTS ──────────────────────────────── */}
-        <div className="relative z-10 flex flex-col justify-between gap-3 sm:gap-4 my-auto">
+        <div className="relative z-10 flex flex-col justify-between gap-3 sm:gap-3.5 my-auto">
           {/* Label Tag */}
           <div className="text-micro font-bold text-steel uppercase tracking-widest mb-1">
             Manual Inputs
@@ -114,6 +113,11 @@ export default function WorkflowBeamDemo() {
 
         {/* ── COLUMN 2: SHANIAI CENTRAL ORCHESTRATION ENGINE ───────────── */}
         <div className="relative z-10 flex flex-col items-center justify-center px-1 sm:px-4">
+          {/* Symmetrical top label spacer matching Column 3 */}
+          <div className="text-micro font-bold text-transparent select-none uppercase tracking-widest mb-2 text-center h-4">
+            Engine
+          </div>
+
           <div className="relative flex items-center justify-center">
             {/* Glowing aura */}
             <div className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-yellow/20 blur-xl pointer-events-none animate-pulse" />
@@ -139,21 +143,24 @@ export default function WorkflowBeamDemo() {
           </div>
         </div>
 
-        {/* ── COLUMN 3: UNIFIED AUTOMATED OUTCOME ──────────────────────── */}
+        {/* ── COLUMN 3: UNIFIED AUTOMATED OUTCOME (PERFECTLY ALIGNED) ─── */}
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <div className="text-micro font-bold text-steel uppercase tracking-widest mb-2 text-center">
+          {/* Top Label */}
+          <div className="text-micro font-bold text-steel uppercase tracking-widest mb-2 text-center h-4">
             Outcome
           </div>
 
+          {/* Circle sized identically to Center node for exact horizontal line */}
           <Circle
             ref={outputRef}
-            className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white border-2 border-success-accent shadow-card flex items-center justify-center hover:scale-105 transition-transform"
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border-2 border-success-accent shadow-card flex items-center justify-center hover:scale-105 transition-transform"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-teal-light/50 flex items-center justify-center">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-teal-light/50 flex items-center justify-center">
               <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-success-accent fill-success-accent/20" />
             </div>
           </Circle>
 
+          {/* Outcome Labels */}
           <div className="text-center mt-2.5">
             <span className="font-semibold text-caption sm:text-body-sm text-ink block leading-tight">
               Unified OS
@@ -220,7 +227,7 @@ export default function WorkflowBeamDemo() {
           dotSpacing={5}
         />
 
-        {/* Beam 5: ShaniAI -> Unified OS */}
+        {/* Beam 5: ShaniAI -> Unified OS (100% Horizontal & Straight) */}
         <AnimatedBeam
           containerRef={containerRef}
           fromRef={centerRef}
@@ -230,18 +237,20 @@ export default function WorkflowBeamDemo() {
           gradientStartColor="#ffd02f"
           gradientStopColor="#00b473"
           pathColor="#e0e2e8"
-          pathWidth={2}
+          pathWidth={2.2}
           dotSpacing={5}
         />
       </div>
 
-      {/* Narrative Footer Strip */}
-      <div className="mt-3.5 pt-3 border-t border-hairline-soft flex flex-col sm:flex-row items-center justify-between gap-2 text-micro sm:text-caption text-steel">
-        <span className="flex items-center gap-1.5 font-semibold text-charcoal">
-          <CheckCircle2 className="w-4 h-4 text-brand-blue" />
-          Your messy tasks &rarr; Transformed into one seamless autonomous workflow
-        </span>
-        <span className="text-[11px] font-bold text-brand-blue bg-surface px-2.5 py-1 rounded-full border border-hairline">
+      {/* Narrative Footer Strip (Fully Aligned & Zero-Wrap) */}
+      <div className="mt-3.5 pt-3 border-t border-hairline-soft flex items-center justify-between gap-3 text-micro sm:text-caption">
+        <div className="flex items-center gap-2 min-w-0">
+          <CheckCircle2 className="w-4 h-4 text-brand-blue flex-shrink-0" />
+          <span className="font-semibold text-charcoal truncate sm:whitespace-normal">
+            Your messy tasks <span className="text-steel font-normal">&rarr;</span> Transformed into one seamless autonomous workflow
+          </span>
+        </div>
+        <span className="text-[11px] font-bold text-brand-blue bg-surface px-3 py-1 rounded-full border border-hairline whitespace-nowrap flex-shrink-0">
           Zero Vendor Lock-in
         </span>
       </div>
