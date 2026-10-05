@@ -1,8 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion, useReducedMotion } from "framer-motion";
 import { springs, easings, durations } from "@/lib/motion";
 import { Zap } from "lucide-react";
+
+const WebThreads = dynamic(() => import("./WebThreads"), {
+  ssr: false,
+});
 
 const baseHeadlineWords = [
   "We",
@@ -24,6 +29,34 @@ export default function Hero() {
     <section
       className="relative bg-transparent py-12 sm:py-16 md:py-20 lg:py-hero px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
+      {/* ── AMBIENT WEBTHREADS WEBGL BACKGROUND ─────────────────────────────── */}
+      <div className="absolute inset-0 z-0 pointer-events-auto overflow-hidden">
+        <WebThreads
+          color1="#5227FF"
+          color2="#FF9FFC"
+          color3="#FFFFFF"
+          speed={0.2}
+          threadCount={6}
+          frequency={5.0}
+          spread={0.18}
+          taper={1.0}
+          position={0.45}
+          fanMode="center"
+          glow={0.02}
+          falloff={0.6}
+          thickness={1.1}
+          brightness={0.7}
+          opacity={0.75}
+          mirror={true}
+          shimmer={false}
+          grain={true}
+          grainIntensity={0.05}
+          mouseInteraction={true}
+          mouseStrength={0.3}
+          backgroundColor="#FFFFFF"
+          lightMode={false}
+        />
+      </div>
 
       {/* ── HERO CONTENT ────────────────────────────────────────────────────── */}
       <div className="relative z-10 max-w-[1280px] mx-auto text-center flex flex-col items-center">
