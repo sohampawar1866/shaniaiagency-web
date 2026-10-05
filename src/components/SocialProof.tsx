@@ -108,14 +108,14 @@ export default function SocialProof() {
           className="mb-10 text-left"
         >
           <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-rose" />
-            Client Endorsements & Impact
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
+            Client Endorsements &amp; Impact
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+            <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
               Trusted by leaders who demand results
             </h2>
-            <span className="text-caption font-bold text-moss-dark bg-teal-light px-3 py-1.5 rounded-full border border-teal-600/20 w-fit">
+            <span className="text-caption font-bold text-moss-dark bg-teal-light px-3.5 py-1.5 rounded-full border border-teal-600/20 w-fit shadow-subtle">
               Verified Client Outcomes
             </span>
           </div>
@@ -131,16 +131,16 @@ export default function SocialProof() {
               ? { duration: 0.01 }
               : { duration: durations.md, ease: easings.snap }
           }
-          className="mb-12 p-4 sm:p-6 bg-surface rounded-xl border border-hairline-soft"
+          className="mb-12 p-4 sm:p-6 bg-surface rounded-2xl border border-hairline-soft"
         >
-          <span className="text-micro-uppercase font-bold text-steel block mb-4 text-center">
+          <span className="text-micro-uppercase font-bold text-steel block mb-4 text-center tracking-wider">
             Engineered Custom Solutions For
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 items-center">
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="w-full py-3 px-4 bg-canvas rounded-lg border border-hairline flex flex-col items-center justify-center text-center shadow-subtle hover:border-steel transition-colors"
+                className="w-full py-3 px-4 bg-canvas rounded-xl border border-hairline flex flex-col items-center justify-center text-center shadow-subtle hover:border-steel hover:shadow-card transition-all duration-150"
               >
                 <span className="text-body-sm font-bold text-ink truncate w-full">
                   {client.name}
@@ -165,6 +165,7 @@ export default function SocialProof() {
             <motion.div
               key={item.id}
               variants={itemVariants}
+              whileHover={shouldReduceMotion ? {} : { y: -4 }}
               whileTap={{ scale: 0.98 }}
               className="bg-canvas rounded-2xl p-6 sm:p-7 border border-hairline-soft shadow-subtle hover:shadow-card transition-all duration-200 flex flex-col justify-between relative group"
             >
