@@ -2,7 +2,8 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { springs, easings, durations } from "@/lib/motion";
-import { Zap, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import WorkflowBeamDemo from "@/components/WorkflowBeamDemo";
 
 const baseHeadlineWords = [
   "We",
@@ -182,7 +183,7 @@ export default function Hero() {
 
           </div>
 
-          {/* ── RIGHT COLUMN: HERO VISUAL MOCKUP ───────────────────────────────── */}
+          {/* ── RIGHT COLUMN: WORKFLOW BEAM DEMO ───────────────────────────────── */}
           <div className="lg:col-span-6 xl:col-span-6 w-full">
             <motion.div
               initial={
@@ -196,104 +197,9 @@ export default function Hero() {
                   ? reducedTransition
                   : { ...springs.smooth, delay: 0.3 }
               }
-              className="w-full bg-white/85 backdrop-blur-md rounded-2xl border border-white/90 shadow-mockup p-3 sm:p-4 text-left hover:shadow-modal transition-shadow duration-300"
+              className="w-full"
             >
-              {/* Mockup Title Bar */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-hairline-soft px-1 sm:px-2">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="w-2.5 h-2.5 rounded-full bg-brand-red inline-block flex-shrink-0" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow inline-block flex-shrink-0" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-success-accent inline-block flex-shrink-0" />
-                  <span className="text-caption font-semibold text-steel ml-1.5 truncate">
-                    Enterprise Dashboard — Custom Software &amp; AI
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
-                  <span className="text-micro font-semibold text-steel bg-surface px-2.5 py-0.5 rounded-md border border-hairline">
-                    Live Preview
-                  </span>
-                </div>
-              </div>
-
-              {/* Dashboard Canvas */}
-              <div className="relative bg-surface rounded-xl p-3.5 sm:p-5 flex flex-col justify-between gap-3 sm:gap-4 overflow-hidden">
-                {/* Dot Grid */}
-                <div
-                  className="absolute inset-0 opacity-30 pointer-events-none"
-                  style={{
-                    backgroundImage: "radial-gradient(#c7cad5 1px, transparent 1px)",
-                    backgroundSize: "20px 20px",
-                  }}
-                />
-
-                {/* Row 1: 3 Modular Cards */}
-                <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
-                  {/* Stat Card */}
-                  <div className="bg-canvas p-3 sm:p-3.5 rounded-xl border border-hairline shadow-subtle flex flex-col justify-between">
-                    <span className="text-micro font-bold text-steel tracking-wide uppercase">
-                      Workflows
-                    </span>
-                    <span className="text-[24px] sm:text-[28px] font-bold text-ink my-1 font-display leading-tight">
-                      840 <span className="text-caption font-sans font-normal text-steel">/ day</span>
-                    </span>
-                    <span className="text-micro text-success-accent font-semibold flex items-center gap-1">
-                      <span>↑</span> 99.97% Uptime
-                    </span>
-                  </div>
-
-                  {/* Sticky Note — Yellow */}
-                  <div className="bg-brand-yellow p-3 sm:p-3.5 rounded-xl shadow-subtle transform -rotate-1 flex flex-col justify-between text-ink">
-                    <span className="text-micro uppercase font-bold tracking-wider opacity-75">
-                      AI Automation
-                    </span>
-                    <p className="text-caption font-medium my-1 leading-snug">
-                      Intelligent task routing &amp; document pipeline
-                    </p>
-                    <span className="text-micro font-bold text-primary">
-                      Status: Deployed ✓
-                    </span>
-                  </div>
-
-                  {/* Sticky Note — Teal */}
-                  <div className="bg-teal-light p-3 sm:p-3.5 rounded-xl shadow-subtle transform rotate-1 flex flex-col justify-between text-ink">
-                    <span className="text-micro uppercase font-bold tracking-wider text-moss-dark opacity-80">
-                      Bespoke Arch
-                    </span>
-                    <p className="text-caption font-medium my-1 text-ink leading-snug">
-                      Zero vendor lock-in with fully owned API
-                    </p>
-                    <span className="text-micro font-bold text-moss-dark">
-                      Support: 24/7
-                    </span>
-                  </div>
-                </div>
-
-                {/* Row 2: Live Workflow Banner */}
-                <div className="relative z-10 bg-canvas rounded-xl p-3 sm:p-3.5 border border-hairline shadow-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <div className="w-8 h-8 rounded-full bg-brand-rose flex items-center justify-center flex-shrink-0 shadow-subtle">
-                      <Zap className="w-4 h-4 text-primary stroke-[2.2]" />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="text-caption sm:text-body-sm font-bold text-ink leading-tight truncate">
-                        Custom Enterprise OS — Live Demo
-                      </h4>
-                      <p className="text-micro sm:text-caption text-steel mt-0.5 truncate">
-                        See how bespoke software transforms operations
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1.5 flex-wrap flex-shrink-0">
-                    <span className="text-micro font-bold bg-surface-pricing-featured text-brand-blue px-2.5 py-1 rounded-full border border-brand-blue/20 whitespace-nowrap">
-                      Full-Stack Build
-                    </span>
-                    <span className="text-micro font-bold bg-coral-light text-coral-dark px-2.5 py-1 rounded-full whitespace-nowrap">
-                      AI-Powered
-                    </span>
-                  </div>
-                </div>
-
-              </div>
+              <WorkflowBeamDemo />
             </motion.div>
           </div>
 
