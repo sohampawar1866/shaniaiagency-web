@@ -69,7 +69,7 @@ export default function FAQ() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Frequently Asked Questions
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Clear answers to practical questions
           </h2>
         </motion.div>
@@ -81,26 +81,28 @@ export default function FAQ() {
             return (
               <div
                 key={faq.id}
-                className="bg-canvas rounded-md transition-colors"
+                className="bg-canvas rounded-xl transition-all duration-150 overflow-hidden"
               >
                 {/* Accordion Item Header / Button */}
                 <motion.button
                   whileTap={{ scale: 0.99 }}
                   onClick={() => toggleItem(faq.id)}
                   aria-expanded={isOpen}
-                  className="w-full text-left py-4 sm:py-6 px-3 sm:px-6 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none group"
+                  className="w-full text-left py-4 sm:py-5 px-3 sm:px-5 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none group hover:bg-surface/50 rounded-xl transition-colors"
                 >
-                  <div className="flex items-start sm:items-center gap-2 sm:gap-3 flex-col sm:flex-row">
+                  <div className="flex items-start sm:items-center gap-2.5 sm:gap-3.5 flex-col sm:flex-row">
                     <span className="text-micro font-bold bg-surface text-steel px-2.5 py-1 rounded-full border border-hairline">
                       {faq.category}
                     </span>
-                    <h3 className="font-sans text-body-sm sm:text-heading-5 md:text-heading-4 font-medium text-ink group-hover:text-brand-blue transition-colors">
+                    <h3 className="font-sans text-heading-5 font-semibold text-ink group-hover:text-brand-blue transition-colors">
                       {faq.question}
                     </h3>
                   </div>
 
                   {/* Plus / Minus Indicator Icon */}
-                  <span className="w-8 h-8 rounded-full bg-surface border border-hairline flex items-center justify-center text-ink flex-shrink-0 text-body-md font-bold transition-transform">
+                  <span className={`w-8 h-8 rounded-full border flex items-center justify-center text-ink flex-shrink-0 text-body-md font-bold transition-all duration-200 ${
+                    isOpen ? "bg-primary text-white border-primary rotate-180" : "bg-surface border-hairline"
+                  }`}>
                     {isOpen ? "−" : "+"}
                   </span>
                 </motion.button>
@@ -122,7 +124,7 @@ export default function FAQ() {
                       }
                       className="overflow-hidden"
                     >
-                      <div className="px-4 sm:px-6 pb-6 pt-2 text-body-md text-slate leading-relaxed">
+                      <div className="px-4 sm:px-6 pb-6 pt-1 text-body-md text-charcoal leading-relaxed max-w-[840px]">
                         {faq.answer}
                       </div>
                     </motion.div>

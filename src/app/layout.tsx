@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-superior antialiased bg-canvas text-ink">{children}</body>
     </html>
   );
 }

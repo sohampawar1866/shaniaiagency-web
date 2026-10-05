@@ -97,7 +97,7 @@ export default function Pricing() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Pricing Structure
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight mb-4">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-4">
             Simple, transparent engagement model
           </h2>
           <p className="font-sans text-subtitle text-slate leading-relaxed">
@@ -111,14 +111,15 @@ export default function Pricing() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-[1080px] mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-[980px] mx-auto"
         >
           {pricingCards.map((card) => (
             <motion.div
               key={card.id}
               variants={itemVariants}
+              whileHover={shouldReduceMotion ? {} : { y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className={`${card.cardStyle} rounded-xl p-5 sm:p-8 lg:p-10 flex flex-col justify-between relative`}
+              className={`${card.cardStyle} rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative transition-shadow duration-200 hover:shadow-mockup`}
             >
               <div>
                 {/* Header Badge & Title */}
@@ -129,25 +130,25 @@ export default function Pricing() {
                     {card.badge}
                   </span>
                   {card.featured && (
-                    <span className="text-micro font-bold bg-brand-yellow text-primary px-2.5 py-1 rounded-sm uppercase tracking-wider whitespace-nowrap">
+                    <span className="text-micro font-bold bg-brand-yellow text-primary px-3 py-1 rounded-full uppercase tracking-wider whitespace-nowrap shadow-subtle">
                       Most Popular
                     </span>
                   )}
                 </div>
 
-                <h3 className="font-sans text-heading-2 font-medium text-ink mb-3">
+                <h3 className="font-display text-heading-2 font-semibold text-ink mb-3">
                   {card.title}
                 </h3>
-                <p className="font-sans text-body-sm text-slate mb-8 leading-relaxed">
+                <p className="font-sans text-body-sm text-charcoal mb-8 leading-relaxed">
                   {card.subtitle}
                 </p>
 
                 {/* Scope Coverage List */}
                 <div className="pt-6 border-t border-hairline-soft mb-8">
-                  <span className="text-micro-uppercase font-bold text-steel block mb-4">
+                  <span className="text-micro-uppercase font-bold text-steel block mb-4 tracking-wider">
                     What This Covers
                   </span>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3.5">
                     {card.scopePoints.map((point, index) => (
                       <li
                         key={index}
@@ -167,8 +168,9 @@ export default function Pricing() {
               <div>
                 <motion.a
                   href="/contact#message"
+                  aria-label={`${card.buttonText} for ${card.title}`}
                   whileTap={{ scale: 0.97 }}
-                  className={`w-full inline-flex items-center justify-center font-medium text-button-md rounded-full py-3.5 px-6 shadow-subtle transition-colors ${card.buttonStyle}`}
+                  className={`w-full inline-flex items-center justify-center font-semibold text-button-md rounded-full py-3.5 px-6 shadow-subtle transition-all duration-150 ${card.buttonStyle}`}
                 >
                   {card.buttonText} →
                 </motion.a>

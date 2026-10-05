@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Miro Design Token Configuration
- * 
- * Font Note:
- * Roobert PRO is Miro's custom geometric display typeface.
- * Inter is configured as the fallback font if Roobert PRO is unavailable on the client system.
+ * ShaniAI Agency — Tailwind Design Token Configuration
+ *
+ * TYPOGRAPHY:
+ *   font-display / font-soul   → LT Soul (serif) — headings, hero H1/H2
+ *   font-sans / font-superior  → LT Superior (geometric sans) — body, UI, nav, buttons
  */
 
 const config: Config = {
@@ -16,6 +16,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // LT Superior — geometric sans-serif for body, UI, nav, buttons
+        sans: [
+          "LT Superior",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        superior: [
+          "LT Superior",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        // LT Soul — elegant serif for display headings, hero H1/H2
+        display: [
+          "LT Soul",
+          "Georgia",
+          "Times New Roman",
+          "serif",
+        ],
+        soul: [
+          "LT Soul",
+          "Georgia",
+          "Times New Roman",
+          "serif",
+        ],
+      },
       colors: {
         // Brand & Accent
         primary: "#1c1c1e",
@@ -40,12 +72,14 @@ const config: Config = {
         "brand-red": "#fbd4d4",
         "brand-red-dark": "#e3c5c5",
         "success-accent": "#00b473",
+        error: "#e53935",
 
         // Surface & Hairlines
         canvas: "#ffffff",
         surface: "#f7f8fa",
         "surface-soft": "#fafbfc",
         "surface-yellow": "#fff8e0",
+        "surface-yellow-muted": "rgba(255, 248, 224, 0.35)",
         "surface-pricing-featured": "#f5f3ff",
         hairline: "#e0e2e8",
         "hairline-soft": "#eef0f3",
@@ -61,28 +95,10 @@ const config: Config = {
         muted: "#a5a8b5",
         "on-dark": "#ffffff",
         "on-dark-muted": "#a5a8b5",
-        "footer-bg": "#1c1c1e",
-      },
-      fontFamily: {
-        // Roobert PRO primary display face with Inter fallback
-        sans: [
-          "Roobert PRO",
-          "var(--font-inter)",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
-        roobert: [
-          "Roobert PRO",
-          "var(--font-inter)",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
+        "footer-bg": "#111113",
+
+        // Component-specific
+        "process-card": "rgba(255,255,255,0.07)",
       },
       fontSize: {
         "hero-display": ["80px", { lineHeight: "1.05", letterSpacing: "-2px" }],
@@ -96,12 +112,13 @@ const config: Config = {
         subtitle: ["18px", { lineHeight: "1.50", letterSpacing: "0" }],
         "body-md": ["16px", { lineHeight: "1.50", letterSpacing: "0" }],
         "body-sm": ["14px", { lineHeight: "1.50", letterSpacing: "0" }],
-        "button-md": ["14px", { lineHeight: "1.30", letterSpacing: "0" }],
+        "button-md": ["15px", { lineHeight: "1.30", letterSpacing: "0" }],
         caption: ["13px", { lineHeight: "1.40", letterSpacing: "0" }],
+        "caption-bold": ["13px", { lineHeight: "1.40", letterSpacing: "0", fontWeight: "700" }],
         micro: ["12px", { lineHeight: "1.40", letterSpacing: "0" }],
         "micro-uppercase": [
           "11px",
-          { lineHeight: "1.40", letterSpacing: "0.5px" },
+          { lineHeight: "1.40", letterSpacing: "0.6px" },
         ],
       },
       borderRadius: {

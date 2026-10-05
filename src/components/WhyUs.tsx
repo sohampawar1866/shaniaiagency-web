@@ -110,7 +110,7 @@ export default function WhyUs() {
       className="relative bg-canvas py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[80vh] flex flex-col justify-center"
     >
       {/* ── ROTATED DENSE TILE GRID FULL BACKGROUND COVERAGE ─────────── */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-75">
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-35">
         <div
           className="absolute w-[220vw] h-[220vh] -left-[60vw] -top-[60vh] grid grid-cols-8 grid-rows-5 gap-2.5 sm:gap-4 origin-center transform rotate-[43deg] scale-[1.2] sm:scale-[1.4]"
         >
@@ -155,7 +155,7 @@ export default function WhyUs() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Why Work With Us
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Engineered for speed, transparency, and impact
           </h2>
         </motion.div>
@@ -174,8 +174,9 @@ export default function WhyUs() {
               <motion.div
                 key={item.id}
                 variants={itemVariants}
-                whileTap={{ scale: 0.97 }}
-                className="bg-canvas/95 backdrop-blur-md rounded-xl p-xl border border-hairline-soft shadow-subtle hover:shadow-card hover:border-hairline transition-all duration-200 cursor-pointer flex flex-col justify-between"
+                whileHover={shouldReduceMotion ? {} : { y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-canvas rounded-2xl p-xl border border-hairline-soft shadow-subtle hover:shadow-card hover:border-hairline transition-all duration-200 cursor-pointer flex flex-col justify-between"
               >
                 <div>
                   {/* Header Icon & Badge */}
@@ -191,7 +192,7 @@ export default function WhyUs() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-sans text-heading-3 font-medium text-ink mb-3 leading-snug">
+                  <h3 className="font-display text-heading-3 font-semibold text-ink mb-3 leading-snug">
                     {item.title}
                   </h3>
 

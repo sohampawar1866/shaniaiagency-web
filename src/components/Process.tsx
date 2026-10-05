@@ -124,7 +124,7 @@ export default function Process() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             How We Work
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-on-primary tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-on-primary tracking-tight">
             A structured 4-step engineering process
           </h2>
         </motion.div>
@@ -143,8 +143,9 @@ export default function Process() {
               <motion.div
                 key={step.number}
                 variants={itemVariants}
-                whileTap={{ scale: 0.97 }}
-                className="bg-white/[0.06] hover:bg-white/[0.1] rounded-2xl p-5 sm:p-xl border border-white/10 hover:border-white/20 transition-all duration-200 cursor-pointer flex flex-col justify-between relative group backdrop-blur-sm"
+                whileHover={shouldReduceMotion ? {} : { y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-process-card hover:bg-white/10 rounded-2xl p-5 sm:p-xl border border-white/10 hover:border-white/25 transition-all duration-200 cursor-pointer flex flex-col justify-between relative group backdrop-blur-sm"
               >
                 {/* Step Header */}
                 <div>
@@ -169,7 +170,7 @@ export default function Process() {
                     <div className={`w-8 h-8 rounded-lg ${step.glowColor} border border-white/10 flex items-center justify-center`}>
                       <Icon className={`w-4 h-4 ${step.iconColor} stroke-[2.2]`} />
                     </div>
-                    <h3 className="font-sans text-heading-3 font-medium text-on-primary">
+                    <h3 className="font-display text-heading-3 font-semibold text-on-primary">
                       {step.title}
                     </h3>
                   </div>

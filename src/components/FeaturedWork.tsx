@@ -249,7 +249,7 @@ export default function FeaturedWork() {
   const activeStudy = featuredStudies[activeIndex];
 
   return (
-    <section id="work" className="bg-canvas py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id="work" className="bg-surface/50 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 border-y border-hairline-soft/60">
       <div className="max-w-[1280px] mx-auto">
 
         {/* Section Header */}
@@ -265,24 +265,26 @@ export default function FeaturedWork() {
           className="mb-8 md:mb-10 text-left"
         >
           <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
             Featured Case Studies
           </div>
-          <h2 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight">
+          <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">
             Real problems. Custom-engineered solutions.
           </h2>
         </motion.div>
 
-        {/* Interactive Case Study Tabs Selector */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 sm:mb-8">
+        {/* Interactive Case Study Tabs Selector - Horizontal swipe on mobile */}
+        <div className="flex sm:grid sm:grid-cols-3 gap-3 mb-6 sm:mb-8 overflow-x-auto pb-2 sm:pb-0 snap-x scrollbar-none" role="tablist">
           {featuredStudies.map((study, idx) => {
             const Icon = study.tabIcon;
             const isActive = activeIndex === idx;
             return (
               <button
                 key={study.id}
+                role="tab"
+                aria-selected={isActive}
                 onClick={() => setActiveIndex(idx)}
-                className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-200 flex items-center gap-3 cursor-pointer ${
+                className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-200 flex items-center gap-3 cursor-pointer flex-shrink-0 w-[260px] sm:w-auto snap-center ${
                   isActive
                     ? "bg-canvas border-primary shadow-card ring-2 ring-primary/10"
                     : "bg-surface border-hairline-soft hover:bg-canvas hover:border-hairline text-steel"
@@ -438,7 +440,7 @@ export default function FeaturedWork() {
                   </div>
 
                   {/* Case Study Title */}
-                  <h3 className="font-sans text-heading-3 font-medium text-ink mb-4 leading-snug">
+                  <h3 className="font-display text-heading-3 font-semibold text-ink mb-4 leading-snug">
                     {activeStudy.title}
                   </h3>
 

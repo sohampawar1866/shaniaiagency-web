@@ -60,12 +60,10 @@ export default function AboutPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
               Who We Are
             </div>
-            <h1 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight mb-6 max-w-[760px]">
-              A boutique studio building software that{" "}
-              <span className="bg-brand-yellow text-primary px-2 rounded-md -rotate-1 inline-block">actually works</span>{" "}
-              for your business
+            <h1 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-6 max-w-[780px]">
+              A boutique studio building software that actually works for your business
             </h1>
-            <p className="font-sans text-subtitle text-slate max-w-[640px] leading-relaxed">
+            <p className="font-sans text-subtitle text-charcoal max-w-[640px] leading-relaxed">
               ShaniAI Agency is a custom software and AI engineering studio. We partner with healthcare operators, fintech founders, retail leaders, and enterprise teams to design, build, and maintain bespoke digital systems: engineered entirely around how your business actually operates.
             </p>
           </div>
@@ -76,10 +74,10 @@ export default function AboutPage() {
           <div className="max-w-[1280px] mx-auto">
             <div className="mb-10">
               <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
-                Leadership & Vision
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
+                Leadership &amp; Vision
               </div>
-              <h2 className="font-sans text-heading-2 font-medium text-ink tracking-tight">
+              <h2 className="font-display text-heading-2 font-semibold text-ink tracking-tight">
                 Built by engineers, led with purpose
               </h2>
             </div>
@@ -89,7 +87,7 @@ export default function AboutPage() {
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-brand-yellow/30 border-2 border-brand-yellow flex items-center justify-center text-primary font-bold text-heading-1 mb-4 shadow-subtle">
                   SP
                 </div>
-                <h3 className="font-sans text-heading-3 font-medium text-ink">
+                <h3 className="font-display text-heading-3 font-semibold text-ink">
                   Soham Pawar
                 </h3>
                 <p className="text-body-sm font-semibold text-brand-blue mt-0.5">
@@ -137,21 +135,21 @@ export default function AboutPage() {
           <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                 Our Mission
               </div>
-              <h2 className="font-sans text-heading-2 font-medium text-ink tracking-tight mb-5">
+              <h2 className="font-display text-heading-2 font-semibold text-ink tracking-tight mb-5">
                 Replace off-the-shelf limitations with software that fits perfectly
               </h2>
-              <p className="text-body-md text-slate leading-relaxed mb-6">
-                Generic SaaS platforms force businesses to reshape their processes around someone else&apos;s assumptions. We believe every serious business deserves software that&apos;s built around the way they actually work - not the other way around.
+              <p className="text-body-md text-charcoal leading-relaxed mb-6">
+                Generic SaaS platforms force businesses to reshape their processes around someone else&apos;s assumptions. We believe every serious business deserves software that&apos;s built around the way they actually work — not the other way around.
               </p>
-              <p className="text-body-md text-slate leading-relaxed">
+              <p className="text-body-md text-charcoal leading-relaxed">
                 Our mission is to make bespoke, AI-powered software development transparent, fast, and accessible to the businesses that need it most.
               </p>
             </div>
-            <div className="bg-primary rounded-2xl p-8 text-on-primary">
-              <h3 className="font-sans text-heading-3 font-medium mb-6">What we&apos;ve built</h3>
+            <div className="bg-primary rounded-2xl p-8 text-on-primary shadow-mockup">
+              <h3 className="font-display text-heading-3 font-semibold mb-6">What we&apos;ve built</h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { value: "50+", label: "Custom builds delivered" },
@@ -160,8 +158,8 @@ export default function AboutPage() {
                   { value: "24/7", label: "Support availability" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-heading-2 font-bold text-brand-yellow">{stat.value}</div>
-                    <div className="text-body-sm text-white/60 mt-1">{stat.label}</div>
+                    <div className="text-heading-2 font-bold text-brand-yellow font-display">{stat.value}</div>
+                    <div className="text-body-sm text-white/70 mt-1">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -177,15 +175,15 @@ export default function AboutPage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                 How We Work
               </div>
-              <h2 className="font-sans text-heading-2 font-medium text-ink tracking-tight">
+              <h2 className="font-display text-heading-2 font-semibold text-ink tracking-tight">
                 The principles behind every build
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {values.map((v) => (
-                <div key={v.title} className={`${v.accent} rounded-2xl p-6 sm:p-8 border border-black/5`}>
-                  <h3 className="font-sans text-heading-3 font-medium text-primary mb-3">{v.title}</h3>
-                  <p className="text-body-md text-primary/80 leading-relaxed">{v.description}</p>
+                <div key={v.title} className={`${v.accent} rounded-2xl p-6 sm:p-8 border border-black/5 shadow-subtle`}>
+                  <h3 className="font-display text-heading-3 font-semibold text-primary mb-3">{v.title}</h3>
+                  <p className="text-body-md text-primary/85 leading-relaxed">{v.description}</p>
                 </div>
               ))}
             </div>
@@ -200,25 +198,25 @@ export default function AboutPage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                 Technical Scope
               </div>
-              <h2 className="font-sans text-heading-2 font-medium text-ink tracking-tight mb-5">
+              <h2 className="font-display text-heading-2 font-semibold text-ink tracking-tight mb-5">
                 What we build
               </h2>
-              <p className="text-body-md text-slate leading-relaxed mb-8">
+              <p className="text-body-md text-charcoal leading-relaxed mb-8">
                 From AI-powered clinical operating systems to custom fintech dashboards: we cover the full stack, from architecture to deployment to long-term management.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3.5">
                 {capabilities.map((cap) => (
                   <li key={cap} className="flex items-center gap-3 text-body-sm text-ink">
-                    <span className="w-5 h-5 rounded-full bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
+                    <span className="w-5 h-5 rounded-full bg-brand-yellow/30 flex items-center justify-center flex-shrink-0">
                       <span className="text-yellow-dark font-bold text-micro">✓</span>
                     </span>
-                    {cap}
+                    <span className="font-medium">{cap}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="bg-canvas rounded-2xl p-6 sm:p-8 border border-hairline-soft shadow-subtle">
-              <h3 className="font-sans text-heading-3 font-medium text-ink mb-6">Industries we serve</h3>
+              <h3 className="font-display text-heading-3 font-semibold text-ink mb-6">Industries we serve</h3>
               {[
                 { name: "Healthcare & Clinical", desc: "EHR systems, patient portals, AI triage pipelines" },
                 { name: "Fintech & Finance", desc: "Ledger automation, risk dashboards, compliance tools" },
@@ -227,7 +225,7 @@ export default function AboutPage() {
                 { name: "Enterprise Operations", desc: "Internal tooling, workflow automation, data platforms" },
               ].map((ind, i) => (
                 <div key={i} className={`py-4 ${i < 4 ? "border-b border-hairline-soft" : ""}`}>
-                  <p className="font-medium text-body-sm text-ink">{ind.name}</p>
+                  <p className="font-semibold text-body-sm text-ink">{ind.name}</p>
                   <p className="text-caption text-steel mt-0.5">{ind.desc}</p>
                 </div>
               ))}
@@ -238,15 +236,15 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
           <div className="max-w-[760px] mx-auto text-center">
-            <h2 className="font-sans text-heading-2 font-medium text-on-primary tracking-tight mb-4">
+            <h2 className="font-display text-heading-2 font-semibold text-on-primary tracking-tight mb-4">
               Ready to build something that fits your business perfectly?
             </h2>
-            <p className="text-subtitle text-white/60 mb-8 leading-relaxed">
+            <p className="text-subtitle text-white/70 mb-8 leading-relaxed">
               Book a 30-minute discovery call with Founder &amp; CEO Soham Pawar and our senior engineering squad: no sales pressure, just honest architecture alignment.
             </p>
             <a
               href="/contact#message"
-              className="inline-flex items-center justify-center bg-brand-yellow text-primary font-medium text-button-md rounded-full px-8 py-3.5 hover:bg-brand-yellow-deep transition-colors"
+              className="inline-flex items-center justify-center bg-brand-yellow text-primary font-semibold text-button-md rounded-full px-9 py-4 shadow-card hover:bg-brand-yellow-deep transition-all duration-150"
             >
               Get in touch →
             </a>
