@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { springs, easings, durations } from "@/lib/motion";
 import { Zap } from "lucide-react";
 
@@ -16,94 +15,15 @@ const baseHeadlineWords = [
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
-  const sectionRef = useRef<HTMLElement>(null);
-
-  // Scroll progress for parallax tile animations
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-
-  // Parallax Y shifts for background 3D floating tiles
-  const tile1Y = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : -60]);
-  const tile2Y = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : -100]);
-  const tile3Y = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : -80]);
 
   // Reduced motion fallbacks
   const reducedTransition = { duration: 0.01 };
 
+
   return (
     <section
-      ref={sectionRef}
       className="relative bg-transparent py-12 sm:py-16 md:py-20 lg:py-hero px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      {/* ── 3D FLOATING BACKGROUND TILES LAYER ──────────────────────────────── */}
-      <div
-        className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
-        style={{ perspective: "1200px" }}
-      >
-        {/* Tile 1: Left Coral Floating Tile */}
-        <motion.div
-          style={{ y: tile1Y }}
-          animate={
-            shouldReduceMotion
-              ? {}
-              : {
-                  y: [0, -14, 0],
-                  rotateX: [50, 54, 50],
-                  rotateZ: [-25, -22, -25],
-                }
-          }
-          transition={{
-            duration: 2.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute left-[-15px] top-[14%] sm:left-[3%] sm:top-[38%] w-24 h-16 sm:w-36 sm:h-24 bg-coral-light/65 rounded-xl border border-coral-dark/20 shadow-subtle backdrop-blur-[2px] transform -rotate-[25deg] rotateX-[50deg] opacity-75 z-10"
-        />
-
-        {/* Tile 2: Right Rose Floating Tile */}
-        <motion.div
-          style={{ y: tile2Y }}
-          animate={
-            shouldReduceMotion
-              ? {}
-              : {
-                  y: [0, 16, 0],
-                  rotateX: [45, 41, 45],
-                  rotateZ: [20, 23, 20],
-                }
-          }
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.3,
-          }}
-          className="absolute right-[-15px] top-[15%] sm:right-[3%] sm:top-[35%] w-26 h-16 sm:w-40 sm:h-26 bg-brand-rose/70 rounded-xl border border-brand-pink/40 shadow-subtle backdrop-blur-[2px] transform rotate-[20deg] rotateX-[45deg] opacity-80 z-10"
-        />
-
-        {/* Tile 3: Lower Right Yellow Floating Tile */}
-        <motion.div
-          style={{ y: tile3Y }}
-          animate={
-            shouldReduceMotion
-              ? {}
-              : {
-                  y: [0, -16, 0],
-                  rotateX: [55, 51, 55],
-                  rotateZ: [-15, -18, -15],
-                }
-          }
-          transition={{
-            duration: 2.3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.6,
-          }}
-          className="absolute right-[10%] bottom-[25%] w-24 h-16 sm:w-32 sm:h-20 bg-brand-yellow/45 rounded-xl border border-brand-yellow-deep/30 shadow-subtle backdrop-blur-[2px] transform -rotate-[15deg] rotateX-[55deg] opacity-55 hidden sm:block"
-        />
-      </div>
 
       {/* ── HERO CONTENT ────────────────────────────────────────────────────── */}
       <div className="relative z-10 max-w-[1280px] mx-auto text-center flex flex-col items-center">
