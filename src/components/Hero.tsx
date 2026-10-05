@@ -18,23 +18,11 @@ export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
 
-  // Bind scroll progress for scroll-driven exit on "actually needs" (scale-up + fade-away)
+  // Scroll progress for parallax tile animations
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-
-  // Masthead Scroll Exit Animation applied ONLY to "actually needs": scale up (1 -> 3.2) & fade away (1 -> 0)
-  const accentScrollScale = useTransform(
-    scrollYProgress,
-    [0, 0.45],
-    [1, shouldReduceMotion ? 1 : 3.2]
-  );
-  const accentScrollOpacity = useTransform(
-    scrollYProgress,
-    [0.15, 0.45],
-    [1, 0]
-  );
 
   // Parallax Y shifts for background 3D floating tiles
   const tile1Y = useTransform(scrollYProgress, [0, 1], [0, shouldReduceMotion ? 0 : -60]);
@@ -173,36 +161,19 @@ export default function Hero() {
             </motion.span>
           ))}
 
-          {/* Second part: "actually needs" phrase */}
+          {/* Second part: "actually needs" phrase — plain text, no yellow blob */}
           <motion.span
-            style={
-              shouldReduceMotion
-                ? {}
-                : {
-                    scale: accentScrollScale,
-                    opacity: accentScrollOpacity,
-                  }
-            }
-            className="inline-block origin-center ml-1 sm:ml-2"
+            variants={{
+              hidden: shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: shouldReduceMotion ? reducedTransition : springs.snappy,
+              },
+            }}
+            className="inline-block mr-[0.25em]"
           >
-            <motion.span
-              variants={{
-                hidden: shouldReduceMotion
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.7, y: 12 },
-                show: {
-                  opacity: 1,
-                  scale: 1,
-                  y: 0,
-                  transition: shouldReduceMotion
-                    ? reducedTransition
-                    : { ...springs.bouncy, delay: 0.54 },
-                },
-              }}
-              className="inline-block bg-brand-yellow text-primary px-2.5 sm:px-3.5 py-0.5 rounded-md -rotate-1 font-semibold shadow-subtle origin-center"
-            >
-              actually needs
-            </motion.span>
+            actually needs
           </motion.span>
         </motion.h1>
 
