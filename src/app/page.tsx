@@ -26,6 +26,7 @@ export default function Home() {
         <FeaturedWork />
         <Industries />
         <Process />
+        <div className="section-bridge-dark-to-light" />
         <Pricing />
         <WhyUs />
         <SocialProof />

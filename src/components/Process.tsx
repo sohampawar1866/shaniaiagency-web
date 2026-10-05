@@ -143,8 +143,9 @@ export default function Process() {
               <motion.div
                 key={step.number}
                 variants={itemVariants}
-                whileTap={{ scale: 0.97 }}
-                className="bg-white/[0.06] hover:bg-white/[0.1] rounded-2xl p-5 sm:p-xl border border-white/10 hover:border-white/20 transition-all duration-200 cursor-pointer flex flex-col justify-between relative group backdrop-blur-sm"
+                whileHover={shouldReduceMotion ? {} : { y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-process-card hover:bg-white/10 rounded-2xl p-5 sm:p-xl border border-white/10 hover:border-white/25 transition-all duration-200 cursor-pointer flex flex-col justify-between relative group backdrop-blur-sm"
               >
                 {/* Step Header */}
                 <div>

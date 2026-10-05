@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
               Legal
             </div>
-            <h1 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight mb-3">
+            <h1 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-3">
               Privacy Policy
             </h1>
             <p className="text-body-sm text-steel">Last updated: {lastUpdated}</p>

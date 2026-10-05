@@ -10,7 +10,6 @@
 
 /* ── FONT FACE DECLARATIONS ──────────────────────────────────────────────── */
 
-/* LT Soul – Serif Display Face */
 @font-face {
   font-family: "LT Soul";
   src: url("/fonts/LTSoul-Regular.otf") format("opentype");
@@ -40,7 +39,6 @@
   font-display: swap;
 }
 
-/* LT Superior – Geometric Sans-Serif */
 @font-face {
   font-family: "LT Superior";
   src: url("/fonts/LTSuperior-Thin.otf") format("opentype");
@@ -137,6 +135,7 @@
   --color-brand-red: #fbd4d4;
   --color-brand-red-dark: #e3c5c5;
   --color-success-accent: #00b473;
+  --color-error: #e53935;
   --color-canvas: #ffffff;
   --color-surface: #f7f8fa;
   --color-surface-soft: #fafbfc;
@@ -154,7 +153,7 @@
   --color-muted: #a5a8b5;
   --color-on-dark: #ffffff;
   --color-on-dark-muted: #a5a8b5;
-  --color-footer-bg: #1c1c1e;
+  --color-footer-bg: #111113;
 
   /* Hero Gradient Color Tokens */
   --color-gradient-orange-core: #F4622A;
@@ -228,7 +227,7 @@
   --text-body-sm: 14px;
   --text-body-sm--line-height: 1.50;
 
-  --text-button-md: 14px;
+  --text-button-md: 15px;
   --text-button-md--line-height: 1.30;
 
   --text-caption: 13px;
@@ -239,20 +238,38 @@
 
   --text-micro-uppercase: 11px;
   --text-micro-uppercase--line-height: 1.40;
-  --text-micro-uppercase--letter-spacing: 0.5px;
+  --text-micro-uppercase--letter-spacing: 0.6px;
 
   /* Box Shadows / Elevation */
-  --shadow-subtle: 0px 1px 2px 0px rgba(5, 0, 56, 0.04);
-  --shadow-card: 0px 4px 12px 0px rgba(5, 0, 56, 0.06);
-  --shadow-mockup: 0px 12px 32px -4px rgba(5, 0, 56, 0.08);
-  --shadow-modal: 0px 16px 48px -8px rgba(5, 0, 56, 0.12);
+  --shadow-subtle: 0px 1px 3px 0px rgba(5, 0, 56, 0.06);
+  --shadow-card: 0px 4px 16px 0px rgba(5, 0, 56, 0.08);
+  --shadow-mockup: 0px 16px 40px -4px rgba(5, 0, 56, 0.10);
+  --shadow-modal: 0px 20px 60px -8px rgba(5, 0, 56, 0.14);
+}
+
+/* ── GLOBAL ACCESSIBILITY ────────────────────────────────────────────────── */
+
+/* Keyboard focus ring — WCAG 2.1 AA SC 2.4.7 */
+*:focus-visible {
+  outline: 2px solid #4262ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth scrolling with scroll-margin compensation for sticky nav */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 72px;
 }
 
 /* ── HERO GRADIENT UTILITY ───────────────────────────────────────────────── */
-/* 
- * Atmospheric orange-blue-white gradient inspired by Sarvam AI hero.
- * Layered radial blobs on a white canvas — no harsh edges, all soft blur.
- * Orange aura at top-center, periwinkle blue on lower sides, dissolves to white.
+/*
+ * Atmospheric orange-blue-white gradient — Sarvam-inspired.
+ * Layered radial blobs on white canvas. Orange dominates top,
+ * periwinkle/lavender wraps lower sides, dissolves to white.
  */
 .hero-gradient {
   background:
@@ -261,4 +278,21 @@
     radial-gradient(ellipse 60%  50% at 100% 45%,  #C5B8E8cc 0%, #9DB0E899 30%, transparent 68%),
     radial-gradient(ellipse 80%  50% at 50%  110%, #B8C8F0bb 0%, #9DB0E844 40%, transparent 62%),
     #ffffff;
+}
+
+/* ── GRADIENT TEXT UTILITY ───────────────────────────────────────────────── */
+/* Used for H1 accent words — orange-to-blue to match hero gradient */
+.text-gradient-hero {
+  background: linear-gradient(135deg, #F4622A 0%, #a855f7 60%, #4262ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── SECTION TRANSITION BRIDGE ───────────────────────────────────────────── */
+/* Smooth gradient fade between dark Process section and white Pricing section */
+.section-bridge-dark-to-light {
+  background: linear-gradient(to bottom, #1c1c1e 0%, #2c2c34 40%, #f7f8fa 100%);
+  height: 80px;
+  width: 100%;
 }

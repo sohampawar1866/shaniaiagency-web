@@ -44,16 +44,20 @@ export default function CtaBanner() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
               href="/contact#message"
+              aria-label="Book a technical discovery call with our engineering team"
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-on-dark text-primary font-medium text-button-md rounded-full px-8 py-3.5 shadow-subtle hover:bg-canvas transition-colors cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-ink font-semibold text-button-md rounded-full px-9 py-4 shadow-card hover:bg-surface-yellow transition-all duration-200 cursor-pointer"
             >
               Book a discovery call
             </motion.a>
 
             <motion.a
               href="mailto:soham@shaniaiagency.tech"
+              aria-label="Email ShaniAI Agency directly"
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent text-on-dark-muted hover:text-on-dark font-medium text-button-md py-3.5 px-6 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/15 text-white font-semibold text-button-md rounded-full py-4 px-7 border border-white/20 transition-all duration-200"
             >
               Or email us directly →
             </motion.a>

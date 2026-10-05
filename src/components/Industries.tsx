@@ -164,7 +164,7 @@ function DesktopSection({
           >
             <div>
               <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-teal" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                 Industries We Serve
               </div>
               <h2 className="font-display text-heading-1 font-semibold text-ink tracking-tight">
@@ -238,7 +238,7 @@ function MobileSection() {
       {/* Header */}
       <div className="px-4 sm:px-6 mb-8">
         <div className="inline-flex items-center gap-2 text-micro-uppercase font-bold tracking-wider text-steel uppercase mb-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-teal" />
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
           Industries We Serve
         </div>
         <h2 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight">

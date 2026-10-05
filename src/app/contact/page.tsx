@@ -21,10 +21,10 @@ export default function ContactPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
               Let&apos;s Work Together
             </div>
-            <h1 className="font-sans text-heading-2 sm:text-heading-1 font-medium text-ink tracking-tight mb-4 max-w-[720px]">
+            <h1 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-4 max-w-[720px]">
               Start a conversation with our team
             </h1>
-            <p className="font-sans text-subtitle text-slate max-w-[580px] leading-relaxed">
+            <p className="font-sans text-subtitle text-charcoal max-w-[580px] leading-relaxed">
               No sales decks, no runaround. Speak directly with Founder &amp; CEO Soham Pawar and our senior engineering team about your project: we&apos;ll tell you exactly what&apos;s possible.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
             {/* Left: Contact Details */}
             <div>
-              <h2 className="font-sans text-heading-3 font-medium text-ink mb-8">
+              <h2 className="font-display text-heading-3 font-semibold text-ink mb-8">
                 Reach us directly
               </h2>
 

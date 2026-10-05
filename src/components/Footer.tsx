@@ -49,11 +49,11 @@ const footerColumns: FooterColumn[] = [
     id: "case-studies",
     title: "Case Studies",
     links: [
-      { name: "HMS Clinical OS", href: "/#work" },
-      { name: "Financial Ledger AI", href: "/#work" },
-      { name: "Supply Chain Dispatch", href: "/#work" },
-      { name: "E-Commerce Engine", href: "/#work" },
-      { name: "Client Stories", href: "/#work" },
+      { name: "FinPay: Invoice AI", href: "/#work" },
+      { name: "LogiQ: Fleet OS", href: "/#work" },
+      { name: "Zova: Demand AI", href: "/#work" },
+      { name: "All Client Stories", href: "/#work" },
+      { name: "Architecture Specs", href: "/#capabilities" },
     ],
   },
   {
@@ -69,13 +69,13 @@ const footerColumns: FooterColumn[] = [
   },
   {
     id: "legal",
-    title: "Legal",
+    title: "Legal & Terms",
     links: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/policy" },
-      { name: "One-Time Build", href: "/#pricing" },
-      { name: "Recurring Support", href: "/#pricing" },
-      { name: "Pricing Model", href: "/#pricing" },
+      { name: "One-Time Build Terms", href: "/#pricing" },
+      { name: "Managed SLA Terms", href: "/#pricing" },
+      { name: "IP & Code Ownership", href: "/#why-us" },
     ],
   },
 ];
@@ -175,7 +175,7 @@ export default function Footer() {
                   ShaniAI Agency
                 </span>
               </Link>
-              <p className="text-caption text-on-dark-muted max-w-[280px] leading-relaxed">
+              <p className="text-caption text-on-dark-muted max-w-[320px] leading-[1.6]">
                 Bespoke software &amp; AI solutions engineered for businesses that need more than off-the-shelf.
               </p>
             </div>

@@ -123,8 +123,9 @@ export default function Capabilities() {
               <motion.div
                 key={item.id}
                 variants={itemVariants}
-                whileTap={{ scale: 0.97 }}
-                className={`${item.cardStyle} ${item.textColor} rounded-xxxl p-xxl flex flex-col justify-between shadow-subtle hover:shadow-card transition-all duration-200 cursor-pointer min-h-[280px] border border-black/5`}
+                whileHover={shouldReduceMotion ? {} : { y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className={`${item.cardStyle} ${item.textColor} rounded-xxxl p-xxl flex flex-col justify-between shadow-subtle hover:shadow-card transition-all duration-200 cursor-pointer min-h-[290px] border border-black/5`}
               >
                 <div>
                   {/* Card Top: Icon & Badge */}
@@ -151,9 +152,9 @@ export default function Capabilities() {
                 </div>
 
                 {/* Card Footer Link Hint */}
-                <div className="mt-8 pt-4 border-t border-black/10 flex items-center justify-between text-body-sm-medium">
+                <div className="mt-8 pt-4 border-t border-black/10 flex items-center justify-between text-body-sm font-semibold">
                   <span>Explore capability</span>
-                  <span className="text-heading-4 leading-none">→</span>
+                  <span className="text-heading-4 leading-none transition-transform group-hover:translate-x-1">→</span>
                 </div>
               </motion.div>
             );
