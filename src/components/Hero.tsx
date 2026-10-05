@@ -77,7 +77,7 @@ export default function Hero() {
             </motion.span>
           ))}
 
-          {/* "actually needs" — gradient accent, no background blob */}
+          {/* "actually needs" — restored original headline color */}
           <motion.span
             variants={{
               hidden: shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 },
@@ -87,7 +87,7 @@ export default function Hero() {
                 transition: shouldReduceMotion ? reducedTransition : { ...springs.snappy, delay: 0.36 },
               },
             }}
-            className="inline-block text-gradient-hero italic"
+            className="inline-block text-ink"
           >
             actually needs
           </motion.span>

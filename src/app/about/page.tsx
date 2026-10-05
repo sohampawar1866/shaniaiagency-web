@@ -61,9 +61,7 @@ export default function AboutPage() {
               Who We Are
             </div>
             <h1 className="font-display text-heading-2 sm:text-heading-1 font-semibold text-ink tracking-tight mb-6 max-w-[780px]">
-              A boutique studio building software that{" "}
-              <span className="text-gradient-hero italic">actually works</span>{" "}
-              for your business
+              A boutique studio building software that actually works for your business
             </h1>
             <p className="font-sans text-subtitle text-charcoal max-w-[640px] leading-relaxed">
               ShaniAI Agency is a custom software and AI engineering studio. We partner with healthcare operators, fintech founders, retail leaders, and enterprise teams to design, build, and maintain bespoke digital systems: engineered entirely around how your business actually operates.
